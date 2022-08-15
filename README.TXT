@@ -8,6 +8,8 @@ It is intended to be a simple (and fun) online quiz application! :-)
 
 Build and Run
 =============
+Required: Java JDK11, Maven
+
 The project is built with Maven with and can be packaged like so;
 $ mvn clean package
 
