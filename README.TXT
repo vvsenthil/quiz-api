@@ -2,8 +2,7 @@
 Introduction
 ============
 Greetings!
-This project is a bare-bones Spring Boot MVC website using the FreeMarker templating engine.
-It is intended to be a simple (and fun) online quiz application! :-)
+This project is a bare-bones Spring Boot RESTful webservice, it is intended to be a simple backend to an online quiz application.
 
 
 Build and Run
@@ -23,7 +22,7 @@ $ java -jar quiz-0.0.1-SNAPSHOT.jar
 Version Control
 ===============
 The project is under "git" version control (only local, there is no remote), feel free to commit to the local
-repository during your development.
+repository during the development of the new features.
 
 
 Features to Implement
@@ -42,7 +41,7 @@ So that I can validate the answers for each question in the quiz.
 
 3) Feature Three
 As an api consumer,
-I Want to retrieve a different set of questions for a Science quiz depending on the type of quiz e.g. Geography Quiz or Science Quiz
+I want to retrieve a different set of questions for a Science quiz depending on the type of quiz e.g. Geography Quiz or Science Quiz
 So that I can support providing different types of quiz.
 
 Good luck!
