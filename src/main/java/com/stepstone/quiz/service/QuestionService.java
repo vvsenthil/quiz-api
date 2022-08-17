@@ -1,4 +1,4 @@
-package com.totaljobsgroup.quiz.service;
+package com.stepstone.quiz.service;
 
 import java.util.List;
 
@@ -6,5 +6,5 @@ import java.util.List;
  *  Question Service Interface
  */
 public interface QuestionService {
-    List<String> getQuestions();
+    List<String> getAll();
 }

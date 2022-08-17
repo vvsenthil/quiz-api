@@ -14,7 +14,7 @@ The project is built with Maven with and can be packaged like so;
 $ mvn clean package
 
 The site can be run from the main class;
-com.totaljobsgroup.quiz.QuizApplication
+com.stepstone.quiz.QuizApplication
 
 Or executed from the runnable jar;
 $ java -jar quiz-0.0.1-SNAPSHOT.jar
@@ -28,22 +28,21 @@ repository during your development.
 
 Features to Implement
 =====================
-Please try adding the following features (feel free to make any code improvements / refactoring you deem necessary);
+Please try adding the following features (feel free to make any code improvements and refactoring you deem necessary);
 
 1) Feature One
-As an end-user,
-I want the questions given in the question repository listed on the "/questions" page,
-So that I can see what questions are available in the repository.
+As an api consumer,
+I want the /questions endpoint to return all questions available in the question repository.
+So that I can retrieve the questions available for a quiz.
 
 2) Feature Two
-As an end-user,
-I want a text-box underneath each question with a submit button for the whole page,
-So that I can enter my answers and submit them to be scored.
+As an api consumer,
+I want an endpoint to check a given answer for any available question is correct.
+So that I can validate the answers for each question in the quiz.
 
 3) Feature Three
-As an end-user,
-I want my answers to be checked (on the server) and a final score displayed (e.g. "You scored 3 out of 4!"),
-So that I know how many of the answers I entered are correct.
-
+As an api consumer,
+I Want to retrieve a different set of questions for a Science quiz depending on the type of quiz e.g. Geography Quiz or Science Quiz
+So that I can support providing different types of quiz.
 
 Good luck!

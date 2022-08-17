@@ -1,4 +1,4 @@
-package com.totaljobsgroup.quiz.repository;
+package com.stepstone.quiz.repository;
 
 import java.util.List;
 
