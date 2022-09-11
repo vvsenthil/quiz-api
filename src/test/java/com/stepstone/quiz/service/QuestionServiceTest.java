@@ -1,28 +1,26 @@
 package com.stepstone.quiz.service;
 
-import com.stepstone.quiz.repository.QuestionRepository;
-import org.junit.jupiter.api.Test;
-
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.Matchers.notNullValue;
 import static org.hamcrest.core.Is.is;
-import static org.mockito.Mockito.mock;
 
-/**
- * Tests for Question Service
- */
+import org.junit.jupiter.api.Test;
+import org.junit.runner.RunWith;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.test.context.junit4.SpringRunner;
+
+
+@RunWith(SpringRunner.class)
+@SpringBootTest
 public class QuestionServiceTest {
 
-    @Test
-    public void getAll_should_return_questions(){
-        // given
-        final var mockQuestionRepository = mock(QuestionRepository.class);
-        final var questionService = new QuestionServiceImpl(mockQuestionRepository);
+	@Autowired
+	private QuestionService questionService;
 
-        // when
-        final var questions = questionService.getAll();
-
-        // then
-        assertThat(questions, is(notNullValue()));
-    }
+	@Test
+	public void getAll_should_return_questions() {
+		final var questions = questionService.getAll();
+		assertThat(questions, is(notNullValue()));
+	}
 }

@@ -1,28 +1,30 @@
 package com.stepstone.quiz.repository;
 
-import org.junit.jupiter.api.Test;
-
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.Matchers.hasSize;
 import static org.hamcrest.Matchers.notNullValue;
 import static org.hamcrest.core.Is.is;
 
-/**
- * Tests for Question Repository
- */
+import org.junit.jupiter.api.Test;
+import org.junit.runner.RunWith;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.test.context.junit4.SpringRunner;
 
+import com.stepstone.quiz.QuizApplication;
+
+@RunWith(SpringRunner.class)
+@SpringBootTest(classes = QuizApplication.class)
 public class QuestionRepositoryTest {
 
-    @Test
-    public void findAll_should_return_questions(){
-        // given
-        final var questionRepository = new QuestionRepositoryImpl();
+	@Autowired
+	private QuestionRepository questionRepository;
 
-        // when
-        final var questions = questionRepository.findAll();
+	@Test
+	public void findAll_should_return_questions() {
+		final var questions = questionRepository.findAll();
+		assertThat(questions, is(notNullValue()));
+		assertThat(questions, is(hasSize(4)));
 
-        // then
-        assertThat(questions, is(notNullValue()));
-        assertThat(questions, is(hasSize(4)));
-    }
+	}
 }

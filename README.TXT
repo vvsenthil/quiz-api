@@ -39,9 +39,4 @@ As an api consumer,
 I want an endpoint to check a given answer for any available question is correct.
 So that I can validate the answers for each question in the quiz.
 
-3) Feature Three
-As an api consumer,
-I want to retrieve a different set of questions for a Science quiz depending on the type of quiz e.g. Geography Quiz or Science Quiz
-So that I can support providing different types of quiz.
-
 Good luck!
